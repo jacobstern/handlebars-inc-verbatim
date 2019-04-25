@@ -12,7 +12,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.4.3",
     "eslint": "^5.16.0",
-    "handlebars-inc": "github:jacobstern/handlebars-inc#8f1e0c730947165197cd93b986a89251d22c4f2a",
+    "handlebars-inc": "github:jacobstern/handlebars-inc#ebdd25d0d8c35adf586b7b6bc6a2aa0af9eab594",
     "jest": "^24.7.1",
     "prettier": "^1.17.0"
   },
