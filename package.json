@@ -2,18 +2,22 @@
   "name": "handlebars-inc-verbatim",
   "version": "0.0.1",
   "description": "Helper for safe HTML strings with handlebars-inc",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint .",
-    "prettify": "prettier --write **/*.js **/*.json"
+    "prettify": "prettier --write **/*.js **/*.json",
+    "build": "parcel build ./lib/index.js --out-dir ./dist",
+    "prepare": "npm run build"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "eslint": "^5.16.0",
     "handlebars-inc": "github:jacobstern/handlebars-inc#ebdd25d0d8c35adf586b7b6bc6a2aa0af9eab594",
     "jest": "^24.7.1",
+    "parcel": "^1.12.3",
     "prettier": "^1.17.0"
   },
   "repository": {

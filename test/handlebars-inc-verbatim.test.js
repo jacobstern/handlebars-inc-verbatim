@@ -156,3 +156,28 @@ test('can render different HTML', () => {
   </div>
 </section>`);
 });
+
+test('can render two adjacent verbatim fragments', () => {
+  const instance = initHandlebarsInc();
+  const template = instance.compile(`<div class="content">
+{{ idomVerbatim content1 }}{{ idomVerbatim content2 }}
+</div>`);
+  const div = document.createElement('div');
+  const data = {
+    content1: '<h1>Hello world!</h1>\nHere is an introductory paragraph.\n',
+    content2: '<h2>About Handlebars Inc</h2>',
+  };
+  instance.patch(div, template(data, { backend: 'idom' }));
+  expect(div.innerHTML).toBe(`<div class="content">
+<h1>Hello world!</h1>
+Here is an introductory paragraph.
+<h2>About Handlebars Inc</h2>
+</div>`);
+  instance.patch(
+    div,
+    template({ ...data, content1: null }, { backend: 'idom' })
+  );
+  expect(div.innerHTML).toBe(`<div class="content">
+<h2>About Handlebars Inc</h2>
+</div>`);
+});
