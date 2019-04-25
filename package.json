@@ -1,0 +1,38 @@
+{
+  "name": "handlebars-inc-verbatim",
+  "version": "0.0.1",
+  "description": "Helper for safe HTML strings with handlebars-inc",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint .",
+    "prettify": "prettier --write **/*.js **/*.json"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.3",
+    "eslint": "^5.16.0",
+    "handlebars-inc": "github:jacobstern/handlebars-inc#8f1e0c730947165197cd93b986a89251d22c4f2a",
+    "jest": "^24.7.1",
+    "prettier": "^1.17.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobstern/handlebars-inc-verbatim.git"
+  },
+  "keywords": [
+    "handlebars",
+    "template",
+    "html",
+    "incremental-dom"
+  ],
+  "author": "Jacob Stern",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobstern/handlebars-inc-verbatim/issues"
+  },
+  "homepage": "https://github.com/jacobstern/handlebars-inc-verbatim#readme",
+  "dependencies": {
+    "dompurify": "^1.0.10"
+  }
+}
